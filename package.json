@@ -1,25 +1,24 @@
 {
   "name": "untitled-ui-icons",
-  "version": "0.0.1",
-  "description": "Icons from Untitled UI FREE pack for React Native",
-  "directories": {
-    "example": "example"
-  },
+  "version": "1.0.0",
+  "description": "Icon generator for Untitled UI Icons",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "generate": "npm run build && node dist/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mitchell-vu/untitled-ui-icons.git"
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "cheerio": "^1.0.0-rc.12",
+    "prettier-eslint": "^15.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-native-svg": "^13.9.0"
   },
-  "keywords": [
-    "untitled-ui",
-    "react-native"
-  ],
-  "author": "Mitchell Vu <mitchell.vu0208@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mitchell-vu/untitled-ui-icons/issues"
-  },
-  "homepage": "https://github.com/mitchell-vu/untitled-ui-icons#readme"
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "typescript": "^5.0.3"
+  }
 }
