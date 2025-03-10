@@ -1,0 +1,25 @@
+{
+  "name": "untitled-ui-icons",
+  "version": "0.0.1",
+  "description": "Icons from Untitled UI FREE pack for React Native",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchell-vu/untitled-ui-icons.git"
+  },
+  "keywords": [
+    "untitled-ui",
+    "react-native"
+  ],
+  "author": "Mitchell Vu <mitchell.vu0208@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mitchell-vu/untitled-ui-icons/issues"
+  },
+  "homepage": "https://github.com/mitchell-vu/untitled-ui-icons#readme"
+}
