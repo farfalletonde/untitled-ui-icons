@@ -40,7 +40,7 @@ const generateReactNativeIcons = async (
 
       const componentContent = `
 import React from 'react';
-import Svg, { Path, G, SvgProps } from 'react-native-svg';
+import Svg, { Path, SvgProps } from 'react-native-svg';
 
 const ${componentName} = (props: SvgProps) => (
   <Svg 
@@ -50,7 +50,10 @@ const ${componentName} = (props: SvgProps) => (
     fill="none"
     {...props} 
   >
-    ${convertSvgToReactElement(iconsAllVariant[0].svgFile, true).replace(`stroke="black"`, "stroke={props.color ?? 'black'}")}
+    ${convertSvgToReactElement(iconsAllVariant[0].svgFile, true).replace(
+      `stroke="black"`,
+      "stroke={props.color ?? 'black'}"
+    )}
   </Svg>
 );
 
