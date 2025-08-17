@@ -1,6 +1,5 @@
 import { load } from "cheerio";
 import { convertAttrsToReactAttrs, capitalizeElementName } from "./attributes";
-import type { IconVariant } from "../types";
 
 export const transformChildren = (children: any[], isNative: boolean) => {
   if (!children.length) return [];
@@ -17,7 +16,10 @@ export const transformChildren = (children: any[], isNative: boolean) => {
   });
 };
 
-export const convertSvgToReactElement = (svgFile: string, isNative: boolean): string => {
+export const convertSvgToReactElement = (
+  svgFile: string,
+  isNative: boolean
+): string => {
   const $ = load(svgFile);
   const elements = $("svg > *");
 
@@ -35,30 +37,4 @@ export const convertSvgToReactElement = (svgFile: string, isNative: boolean): st
   });
 
   return elements.toString().replace(/"?{(.*?)}"?/g, "{$1}");
-};
-
-export const generateVariantComponents = (variants: IconVariant[], isNative: boolean): string => {
-  return variants
-    .map(({ variant, svgFile }) => {
-      return `const ${variant} = ({ color }) => (<>${convertSvgToReactElement(svgFile, isNative)}</>)`;
-    })
-    .join("\n\n");
-};
-
-export const generateVariantSwitch = (variants: IconVariant[]): string => {
-  const cases = variants
-    .map(
-      ({ variant }) => `
-    case '${variant}':
-      return <${variant} color={color} />;`
-    )
-    .join("");
-
-  return `
-  const chooseVariant = (variant, color) => {
-    switch (variant) {${cases}
-      default:
-        return <Line color={color} />;
-    }
-  };`;
 };

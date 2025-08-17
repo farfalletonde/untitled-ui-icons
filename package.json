@@ -13,12 +13,12 @@
     "cheerio": "^1.0.0-rc.12",
     "prettier-eslint": "^15.0.1",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-native-svg": "^13.9.0"
+    "react": "^19.1.1",
+    "react-native-svg": "^15.12.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
+    "@types/react": "^19.1.10",
     "typescript": "^5.0.3"
   }
 }
